@@ -9,14 +9,14 @@ class HomeDataModel extends Equatable {
   factory HomeDataModel.fromJson(Map<String, dynamic> json) {
     return HomeDataModel(
       banners: List<BannerModel>.from(
-        json['banners'].map(
+          ( json['banners'].map(
           (element) => BannerModel.fromJson(element),
-        ),
+        ) ),
       ),
       products: List<ProductModel>.from(
-        json['products'].map(
+          json['products'].map(
           (element) => ProductModel.fromJson(element),
-        ),
+          ),
       ),
     );
   }

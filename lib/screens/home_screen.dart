@@ -24,16 +24,12 @@ class HomeScreen extends StatelessWidget {
               IconButton(
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (_) => SearchScreen()));
+                        MaterialPageRoute(builder: (_) => SearchScreen(),),);
                   },
                   icon: const Icon(Icons.search))
             ],
           ),
-          body: cubit.currentIndex == 0
-              ? (cubit.homeData == null
-                  ?const Center(child: CircularProgressIndicator())
-                  : cubit.bottomScreen[cubit.currentIndex])
-              : cubit.bottomScreen[cubit.currentIndex],
+          body: cubit.bottomScreen[cubit.currentIndex],
           bottomNavigationBar: BottomNavigationBar(
             onTap: (index) {
               cubit.changeBottom(index);
