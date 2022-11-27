@@ -30,10 +30,3 @@ String getTokenShared() {
 
   return token;
 }
-// signOut(){
-// CacheHelper.remove(key: 'token').then((value) {
-// if(value){
-// Navigator.pushReplacement(context,MaterialPageRoute(builder: (_)=>LoginScreen()) );
-// }
-// });
-// }

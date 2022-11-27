@@ -1,5 +1,5 @@
 import 'package:demoshopapp/controllers/home_cubit.dart';
-import 'package:demoshopapp/data/categories_model.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

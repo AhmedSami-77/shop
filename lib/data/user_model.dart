@@ -3,10 +3,10 @@ import 'package:equatable/equatable.dart';
 
 class UserModel extends Equatable {
   final bool status;
-  final String message;
+   String? message;
   final UserDataModel data;
 
-  const UserModel({
+   UserModel({
     required this.status,
     required this.message,
     required this.data,
@@ -15,7 +15,7 @@ class UserModel extends Equatable {
   factory UserModel.fromJson(Map<String, dynamic> json) {
     return UserModel(
       status: json['status'],
-      message: json['message'],
+      message: json['message']??"",
       data: UserDataModel.fromJson(json['data'] ??
           {
             'id': 0,
@@ -30,5 +30,5 @@ class UserModel extends Equatable {
   }
 
   @override
-  List<Object> get props => [status, message, data];
+  List<Object?> get props => [status, message, data];
 }

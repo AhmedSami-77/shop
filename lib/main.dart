@@ -19,7 +19,7 @@ void main() async {
     vonBoarding = value ?? false;
   });
   await CacheHelper.getData(key: 'token').then((value) {
-    vToken = value ?? '';
+    vToken = value??"" ;
   });
   runApp(MyApp(
     onBoarding: vonBoarding,
@@ -36,8 +36,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return BlocProvider(
-      create: (context) => HomeCubit()..getHomeData()..getCategoriesData(),
+      create: (context) => HomeCubit()..getHomeData()..getCategoriesData()..getFavoritesData()..getProfileData(),
       child: MaterialApp(
         title: 'Shopping',
         theme: ThemeData(

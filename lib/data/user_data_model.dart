@@ -5,8 +5,8 @@ class UserDataModel extends Equatable {
   final String name;
   final String email;
   final String phone;
-  final int points;
-  final int credit;
+  final int? points;
+  final int? credit;
   final String token;
 
   const UserDataModel({

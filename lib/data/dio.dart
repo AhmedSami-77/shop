@@ -1,3 +1,4 @@
+
 import 'package:dio/dio.dart';
 
 class DioHelper {
@@ -8,6 +9,7 @@ class DioHelper {
       BaseOptions(
         baseUrl: 'https://student.valuxapps.com/api/',
         receiveDataWhenStatusError: true,
+
       ),
     );
   }
@@ -20,7 +22,7 @@ class DioHelper {
     dio!.options.headers = {
       'lang': lang,
       'Content-Type': 'application/json',
-      'Authorization': token ?? '',
+      'Authorization': token ,
     };
     return await dio!.get(endPointUrl, queryParameters: query);
   }
